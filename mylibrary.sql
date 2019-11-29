@@ -23,7 +23,7 @@ DROP TABLE IF EXISTS `books`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `books` (
-  `book_id` int(11) NOT NULL,
+  `book_id` int(11) NOT NULL AUTO_INCREMENT,
   `book_name` varchar(50) DEFAULT NULL,
   `book_author` varchar(50) DEFAULT NULL,
   `book_subject` varchar(50) DEFAULT NULL,
@@ -50,7 +50,7 @@ DROP TABLE IF EXISTS `copies`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `copies` (
-  `copy_id` int(11) NOT NULL,
+  `copy_id` int(11) NOT NULL AUTO_INCREMENT,
   `copy_bookid` int(11) NOT NULL,
   `copy_rack` int(11) NOT NULL,
   `copy_status` varchar(20) DEFAULT NULL,
@@ -77,7 +77,7 @@ DROP TABLE IF EXISTS `issuerecord`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `issuerecord` (
-  `record_id` int(11) NOT NULL,
+  `record_id` int(11) NOT NULL AUTO_INCREMENT,
   `record_copyid` int(11) NOT NULL,
   `record_userid` int(11) NOT NULL,
   `record_issuedate` date DEFAULT NULL,
@@ -109,7 +109,7 @@ DROP TABLE IF EXISTS `payments`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `payments` (
-  `pay_id` int(11) NOT NULL,
+  `pay_id` int(11) NOT NULL AUTO_INCREMENT,
   `payuser_id` int(11) DEFAULT NULL,
   `pay_amount` float DEFAULT NULL,
   `pay_type` varchar(40) DEFAULT NULL,
@@ -138,7 +138,7 @@ DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `users` (
-  `users_id` int(11) NOT NULL,
+  `users_id` int(11) NOT NULL AUTO_INCREMENT,
   `users_name` varchar(50) DEFAULT NULL,
   `users_email` varchar(50) DEFAULT NULL,
   `users_phone` int(11) DEFAULT NULL,
@@ -166,4 +166,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-11-29 15:07:58
+-- Dump completed on 2019-11-29 16:22:08
